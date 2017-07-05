@@ -5,50 +5,35 @@ using System.Data.Sql;
 
 public partial class register : System.Web.UI.Page
 {
-    int counter = 0;
+    int counter;
     SqlConnection conn;
+    SqlCommand com;
+    string connectString = "Server=tcp:roguedatabase.database.windows.net,1433;Initial Catalog=rogueDB;Persist Security Info=False;User ID=treyhall;Password=web.56066;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
     protected void Page_Load(object sender, EventArgs e)
     {
-  
+        if (User.IsInRole("User"))
+        {
+            Master.FindControl("MemberBar").Visible = true;
+            Master.FindControl("LoginBar").Visible = false;
+        }
+        else
+        {
+            Master.FindControl("MemberBar").Visible = false;
+            Master.FindControl("LoginBar").Visible = true;
+        }
     }
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        bool userExists = false;
-        string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=E:\ROGUEASP\ROGUEDB.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         using (SqlConnection conn = new SqlConnection(connectString))
         {
+            string command = "INSERT INTO UserData VALUES ('" + txtScreen.Text + "', '" + txtUser.Text + "', '" + txtPass.Text + "', '" + txtFirst.Text + "', '" + txtLast.Text + "')";
+            com = new SqlCommand(command, conn);
             conn.Open();
 
-            SqlCommand com = new SqlCommand();
-
-            com.Connection = conn; //Pass the connection object to Command
-                                   //com.CommandType = CommandType.StoredProcedure; // We will use stored procedure.
-                                   //com.CommandText = "selectUser"; //Stored Procedure Name
-
-            //com.Parameters.Add("@Username", SqlDbType.NVarChar).Value = txtUser.Text;
-            //SqlDataReader reader = com.ExecuteReader();
-            //if(reader.Read().ToString() != null)
-            //{
-            //    userExists = true;
-            //    Label1.Text = "Sorry, this user already exists.";
-            //}
-            //reader.Close();
-            //if (userExists == false)
-            //{
-
-            //}
+            com.Connection = conn;
             try
             {
-                com.CommandType = CommandType.StoredProcedure; // We will use stored procedure.
-                com.CommandText = "spInsertUser"; //Stored Procedure Name
-
-                com.Parameters.Add("@FName", SqlDbType.NVarChar).Value = txtFirst.Text;
-                com.Parameters.Add("@LName", SqlDbType.NVarChar).Value = txtLast.Text;
-                com.Parameters.Add("@SName", SqlDbType.NVarChar).Value = txtScreen.Text;
-                com.Parameters.Add("@Username", SqlDbType.NVarChar).Value = txtUser.Text;
-                com.Parameters.Add("@Password", SqlDbType.NVarChar).Value = txtPass.Text;
-
                 com.ExecuteNonQuery();
 
                 txtFirst.Text = string.Empty;
@@ -56,10 +41,12 @@ public partial class register : System.Web.UI.Page
                 txtUser.Text = string.Empty;
                 txtPass.Text = string.Empty;
                 txtScreen.Text = string.Empty;
+
+                counter++;
             }
             catch { }
-            
+
             conn.Close();
-        }        
+        }
     }
 }

@@ -58,6 +58,7 @@ body p{
 	display:block;
 	color:#747474;
     text-align: left;
+    margin-left: 0px;
 }
 body footer {
 	color: white;

@@ -8,9 +8,12 @@
 <asp:content id="Body" contentplaceholderid="ContentPlaceHolder1" runat="server">
     <h1>Login:</h1>
             <p>
-                Username: <asp:TextBox ID="txtUser" runat="server"></asp:TextBox> <br />
-                Password: <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox> <br />
-                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" /> <br />
+                Username: <input id="Username" runat="server" type="text"/><br />
+                Password: <input id="Password" runat="server" type="password"/><br />
+
+                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+                <asp:Label id="ErrorLabel" runat="Server" ForeColor="Red" Visible="false"/> <br />
+                
                 Don't have an account? <a href = "register.aspx">Click Here!</a>          
             </p> 
 </asp:content>

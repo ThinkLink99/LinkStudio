@@ -1,21 +1,53 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="register.aspx.cs" Inherits="register" MasterPageFile="MasterPages/MasterPage.master" %>
+<%@ MasterType virtualpath="MasterPages/MasterPage.master" %>
 
 <asp:content id="Head" contentplaceholderid="head" runat="server">
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            text-align: right;
+        }
+    </style>
 
 </asp:content>
 <asp:content id="Body" contentplaceholderid="ContentPlaceHolder1" runat="server">
     <h1>Register:</h1>
-            <p>
-                &nbsp;First Name: <asp:TextBox ID="txtFirst" runat="server"></asp:TextBox> 
-                Last Name: <asp:TextBox ID="txtLast" runat="server"></asp:TextBox> <br />
-                <br />
-                Username: <asp:TextBox ID="txtUser" runat="server"></asp:TextBox> <br />
-                Password: <asp:TextBox ID="txtPass" runat="server"></asp:TextBox> <br />
-                <br />
-                Screenname: <asp:TextBox ID="txtScreen" runat="server"></asp:TextBox> <br />
-                <br />
-                Birthday: <br />
-                Month: <asp:DropDownList ID="ddlMonth" runat="server">
+    <table class="auto-style1">
+        <tr>
+            <td class="auto-style2">First Name:</td>
+            <td> <asp:TextBox ID="txtFirst" runat="server"></asp:TextBox> 
+                </td>
+        </tr>
+        <tr>
+            <td class="auto-style2">Last Name: </td>
+            <td> <asp:TextBox ID="txtLast" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">Username:</td>
+            <td> <asp:TextBox ID="txtUser" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="auto-style2">Password:</td>
+            <td> <asp:TextBox ID="txtPass" runat="server" Width="121px"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="auto-style2">Screenname:</td>
+            <td> <asp:TextBox ID="txtScreen" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">Birthday:</td>
+            <td> <asp:DropDownList ID="ddlMonth" runat="server">
                     <asp:ListItem>January</asp:ListItem>
                     <asp:ListItem>February</asp:ListItem>
                     <asp:ListItem>March</asp:ListItem>
@@ -29,7 +61,7 @@
                     <asp:ListItem>November</asp:ListItem>
                     <asp:ListItem>December</asp:ListItem>
                 </asp:DropDownList>
-                Day: <asp:DropDownList ID="ddlDay" runat="server">
+                <asp:DropDownList ID="ddlDay" runat="server">
                     <asp:ListItem>1</asp:ListItem>
                     <asp:ListItem>2</asp:ListItem>
                     <asp:ListItem>3</asp:ListItem>
@@ -62,7 +94,7 @@
                     <asp:ListItem>30</asp:ListItem>
                     <asp:ListItem>31</asp:ListItem>
                 </asp:DropDownList>
-                Year: <asp:DropDownList ID="ddlYear" runat="server">
+                <asp:DropDownList ID="ddlYear" runat="server" Height="16px">
                     <asp:ListItem>1990</asp:ListItem>
                     <asp:ListItem>1991</asp:ListItem>
                     <asp:ListItem>1992</asp:ListItem>
@@ -91,9 +123,16 @@
                     <asp:ListItem>2015</asp:ListItem>
                     <asp:ListItem>2016</asp:ListItem>
                     <asp:ListItem>2017</asp:ListItem>
-                </asp:DropDownList> <br />
-                <br />
-                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" /> 
-                <br />        
-            </p>
+                </asp:DropDownList> </td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td>
+                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" /> </td>
+        </tr>
+    </table>
 </asp:content>

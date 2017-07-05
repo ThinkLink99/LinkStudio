@@ -15,9 +15,9 @@
 <body>
     <form id="form1" runat="server">
     <div id="PageWrapper">
-        <header class = "loginbar"><a href="login.aspx"><asp:Label ID="lblLogin" runat="server" Text="Login"></asp:Label></a><a href="register.aspx"><asp:Label ID="lblRegister" runat="server" Text="Register"></asp:Label></a></header>
-            <a href="Default.aspx"><img src="images/banner.png" width="700" height="100" alt=""/></a>            
-	        <header class = "navbar">
+        <header class = "loginbar"><asp:Panel ID="LoginBar" runat="server"><a href="login.aspx"><asp:Label ID="lblLogin" runat="server" Text="Login"></asp:Label></a><a href="register.aspx"><asp:Label ID="lblRegister" runat="server" Text="Register"></asp:Label></a></asp:Panel></header>
+        <header class = "loginbar"><asp:Panel ID="MemberBar" runat="server"><a href="profile.aspx"><asp:Label ID="lblProfile" runat="server" Text="Profile"></asp:Label></a><a href="logout.aspx"><asp:Label ID="lblLogout" runat="server" Text="Logout"></asp:Label></a></asp:Panel></header>
+            <a href="Default.aspx"><img src="images/banner.png" width="700" height="100" alt=""/></a><header class = "navbar">
 		        <nav>
         	        <ul>
                         <li><a href = "Default.aspx">Home</a></li>
@@ -30,11 +30,10 @@
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>                 
-        <footer>&copy;Copyright 2017</footer>
+        <footer>&copy; Copyright Trey Hall 2017</footer>
     </div>
     <div id="Sidebar">
         <aside>
-            Sidebar
         </aside>   
     </div>
     </form>
