@@ -11,16 +11,7 @@ public partial class register : System.Web.UI.Page
     string connectString = "Server=tcp:roguedatabase.database.windows.net,1433;Initial Catalog=rogueDB;Persist Security Info=False;User ID=treyhall;Password=web.56066;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (User.IsInRole("User"))
-        {
-            Master.FindControl("MemberBar").Visible = true;
-            Master.FindControl("LoginBar").Visible = false;
-        }
-        else
-        {
-            Master.FindControl("MemberBar").Visible = false;
-            Master.FindControl("LoginBar").Visible = true;
-        }
+
     }
 
     protected void btnSubmit_Click(object sender, EventArgs e)

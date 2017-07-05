@@ -15,16 +15,7 @@ public partial class Login : System.Web.UI.Page
     Label RegisterLabel;
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (User.IsInRole("User"))
-        {
-            Master.FindControl("MemberBar").Visible = true;
-            Master.FindControl("LoginBar").Visible = false;
-        }
-        else
-        {
-            Master.FindControl("MemberBar").Visible = false;
-            Master.FindControl("LoginBar").Visible = true;
-        }
+        
     }
 
     protected void btnSubmit_Click(object sender, EventArgs e)
