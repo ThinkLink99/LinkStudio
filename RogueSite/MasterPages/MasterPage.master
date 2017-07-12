@@ -26,7 +26,7 @@
                         <li><a href = "/forums.aspx">Forums</a></li>
                         <li><a href = "/download.aspx">Download</a></li>
                         <li><a href = "/Managers/Default.aspx"><asp:Label ID="lblManagers" runat="server" Text="Manager Pages" Visible="false"></asp:Label></a></li>
-                        <li><a href = "/Admins/Default.aspx"><asp:Label ID="lblAdmins" runat="server" Text="Admin Pages" Visible="false"></asp:Label></a></li>
+                        <li><asp:Label ID="lblAdmins" runat="server" Text="Admin Pages" Visible="false"><a href = "/Admins/Default.aspx">Admin Pages</a></asp:Label></li>
         	        </ul>
                 </nav>
             </header>
