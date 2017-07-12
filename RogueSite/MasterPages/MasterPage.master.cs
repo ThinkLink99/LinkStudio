@@ -17,11 +17,13 @@ public partial class MasterPages_MasterPage : System.Web.UI.MasterPage
 
             MemberBar.Visible = true;
             LoginBar.Visible = false;
+            pnlForums.Visible = true;
         }
         else
         {
             MemberBar.Visible = false;
             LoginBar.Visible = true;
+            pnlForums.Visible = false;
         }
         if (Page.User.IsInRole("Manager"))
         {
