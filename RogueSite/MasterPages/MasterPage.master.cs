@@ -33,7 +33,7 @@ public partial class MasterPages_MasterPage : System.Web.UI.MasterPage
         }
         if (Page.User.IsInRole("Administrator"))
         {
-            pnlAdmins.Visible = false;
+            pnlAdmins.Visible = true;
         }
         else
         {
