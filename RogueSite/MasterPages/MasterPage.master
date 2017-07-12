@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
     <div id="PageWrapper">
         <header class = "loginbar"><asp:Panel ID="LoginBar" runat="server"><a href="/login.aspx"><asp:Label ID="lblLogin" runat="server" Text="Login"></asp:Label></a><a href="/register.aspx"><asp:Label ID="lblRegister" runat="server" Text="Register"></asp:Label></a></asp:Panel></header>
-        <header class = "loginbar"><asp:Panel ID="MemberBar" runat="server"><a href="members/profile.aspx"><asp:Label ID="lblProfile" runat="server" Text="Profile"></asp:Label></a><a href="members/logout.aspx"><asp:Label ID="lblLogout" runat="server" Text="Logout"></asp:Label></a></asp:Panel></header>
+        <header class = "loginbar"><asp:Panel ID="MemberBar" runat="server"><a href="members/profile.aspx"><asp:Label ID="lblProfile" runat="server" Text="Profile"></asp:Label></a><a href="/members/logout.aspx"><asp:Label ID="lblLogout" runat="server" Text="Logout"></asp:Label></a></asp:Panel></header>
             <a href="/Default.aspx"><img src="/images/banner.png" width="700" height="100" alt=""/></a><header class = "navbar">
 		        <nav>
         	        <ul>
@@ -24,16 +24,20 @@
                         <li><a href = "/about.aspx">About</a></li>
                         <li><a href = "/blog.aspx">Blog</a></li>
                         <li><a href = "/forums.aspx">Forums</a></li>
-                        <li><a href = "/download.aspx">Download</a></li></ul>
+                        <li><a href = "/download.aspx">Download</a></li>
+                        <li><a href = "/Managers/Default.aspx"><asp:Label ID="lblManagers" runat="server" Text="Manager Pages" Visible="false"></asp:Label></a></li>
+                        <li><a href = "/Admins/Default.aspx"><asp:Label ID="lblAdmins" runat="server" Text="Admin Pages" Visible="false"></asp:Label></a></li>
+        	        </ul>
                 </nav>
             </header>
-            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>                 
         <footer>&copy; Copyright Trey Hall 2017</footer>
     </div>
-    <div id="Sidebar">
+        <div id="Sidebar">
         <aside>
+            aside
         </aside>   
     </div>
     </form>

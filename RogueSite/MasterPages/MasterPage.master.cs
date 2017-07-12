@@ -23,5 +23,21 @@ public partial class MasterPages_MasterPage : System.Web.UI.MasterPage
             MemberBar.Visible = false;
             LoginBar.Visible = true;
         }
+        if (Page.User.IsInRole("Manager"))
+        {
+            lblManagers.Visible = true;
+        }
+        else
+        {
+            lblManagers.Visible = false;
+        }
+        if (Page.User.IsInRole("Administrator"))
+        {
+            lblAdmins.Visible = false;
+        }
+        else
+        {
+            lblAdmins.Visible = false;
+        }
     }
 }
