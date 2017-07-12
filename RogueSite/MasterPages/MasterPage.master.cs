@@ -25,19 +25,19 @@ public partial class MasterPages_MasterPage : System.Web.UI.MasterPage
         }
         if (Page.User.IsInRole("Manager"))
         {
-            lblManagers.Visible = true;
+            pnlManagers.Visible = true;
         }
         else
         {
-            lblManagers.Visible = false;
+            pnlManagers.Visible = false;
         }
         if (Page.User.IsInRole("Administrator"))
         {
-            lblAdmins.Visible = false;
+            pnlAdmins.Visible = false;
         }
         else
         {
-            lblAdmins.Visible = false;
+            pnlAdmins.Visible = false;
         }
     }
 }

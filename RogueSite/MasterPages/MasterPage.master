@@ -25,8 +25,9 @@
                         <li><a href = "/blog.aspx">Blog</a></li>
                         <li><a href = "/forums.aspx">Forums</a></li>
                         <li><a href = "/download.aspx">Download</a></li>
-                        <li><a href = "/Managers/Default.aspx"><asp:Label ID="lblManagers" runat="server" Text="Manager Pages" Visible="false"></asp:Label></a></li>
-                        <li><asp:Label ID="lblAdmins" runat="server" Text="Admin Pages" Visible="false"><a href = "/Admins/Default.aspx">Admin Pages</a></asp:Label></li>
+                        <li><asp:Panel ID="pnlManagers" runat="server" Visible="false"><a href = "/Managers/Default.aspx"><asp:Label ID="lblManagers" runat="server" Text="Manager Pages"></asp:Label></a></asp:Panel>
+                        </li>
+                        <li><asp:Panel ID="pnlAdmins" runat="server" Visible="false"><a href = "/Admins/Default.aspx"><asp:Label ID="lblAdmins" runat="server" Text="Admin Pages" Visible="false"></asp:Label></a></asp:Panel></li>
         	        </ul>
                 </nav>
             </header>
