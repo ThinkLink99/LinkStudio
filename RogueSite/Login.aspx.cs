@@ -11,8 +11,6 @@ using System.Configuration;
 
 public partial class Login : System.Web.UI.Page
 {
-    Label LoginLabel;
-    Label RegisterLabel;
     protected void Page_Load(object sender, EventArgs e)
     {
         

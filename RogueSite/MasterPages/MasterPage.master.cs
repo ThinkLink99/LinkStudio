@@ -8,7 +8,6 @@ using System.Data.SqlClient;
 using System.Web.Security;
 public partial class MasterPages_MasterPage : System.Web.UI.MasterPage
 {
-    string connectString = "Server=tcp:roguedatabase.database.windows.net,1433;Initial Catalog=rogueDB;Persist Security Info=False;User ID=treyhall;Password=web.56066;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Page.User.IsInRole("User"))
@@ -17,7 +16,7 @@ public partial class MasterPages_MasterPage : System.Web.UI.MasterPage
 
             MemberBar.Visible = true;
             LoginBar.Visible = false;
-            pnlForums.Visible = true;
+            pnlForums.Visible = false;
         }
         else
         {

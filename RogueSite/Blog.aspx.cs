@@ -9,7 +9,6 @@ using System.Drawing;
 
 public partial class Blog : System.Web.UI.Page
 {
-    Form blogForm;
     protected void Page_Load(object sender, EventArgs e)
     {
     }
