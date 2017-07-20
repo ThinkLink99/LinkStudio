@@ -9,6 +9,6 @@ public partial class MemberPages_Profile : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        lblWelcome.Text = "Welcome, " + User.Identity.Name + "!";
     }
 }

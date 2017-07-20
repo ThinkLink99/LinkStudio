@@ -4,11 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
 
 public partial class Download : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        WebClient Client = new WebClient();
+        Client.DownloadFile("/Files/GameFiles/", "~/Files/GameFiles/Rogue.zip");
+        Response.Redirect("/members/profile.aspx");
     }
 }
