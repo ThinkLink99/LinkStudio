@@ -8,7 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <h1><asp:Label ID="lblWelcome" runat="server" Text="Welcome, User!"></asp:Label></h1>
-    <h2><a href="Download.aspx">Download Here</a></h2>
+    <h2><a href="../Files/GameFiles/Rogue.zip">Download Here</a></h2>
 
     <asp:Image ID="Image1" runat="server" Height="144px" Width="144px" />
 </asp:Content>

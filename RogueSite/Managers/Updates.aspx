@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Updates.aspx.cs" Inherits="Updates" %>
 
+<%@ Register Src="~/Controls/BlogUpdates.ascx" TagPrefix="uc1" TagName="BlogUpdates" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,11 +17,7 @@
         <p>
 
             Welcome to the brand new Launcher For Rouge! This will show all updates, blog posts and other important information before running the game.</p>
-        <h1>
-
-            Game Version Early Alpha 1.1.0
-
-        </h1>
+        <uc1:BlogUpdates runat="server" ID="BlogUpdates" />
     </div>
     </form>
 </body>

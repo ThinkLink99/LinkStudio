@@ -10,8 +10,8 @@ public partial class Download : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        WebClient Client = new WebClient();
-        Client.DownloadFile("/Files/GameFiles/", "~/Files/GameFiles/Rogue.zip");
-        Response.Redirect("/members/profile.aspx");
+        //WebClient Client = new WebClient();
+        //Client.DownloadFile("http://rogueasp.azurewebsites.net/Files/GameFiles/Rogue.zip", Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "Rogue.zip");
+        //Response.Redirect("/members/profile.aspx");
     }
 }
