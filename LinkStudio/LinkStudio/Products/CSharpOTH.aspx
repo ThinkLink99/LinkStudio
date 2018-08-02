@@ -6,7 +6,18 @@
     <div id="ProductInfo">
         <h4>About CSharp on the Hill</h4>
         <p>
-            Cs on the Hill is a PC adaptation of Avalon Hill's Board game 'Betrayal at House on th Hill'.
+            C# on the Hill is a PC adaptation of Avalon Hill's Board game 'Betrayal at House on the Hill'.
+        </p>
+        <br />
+        <h4>Backstory on the boardgame</h4>
+        <p>
+            The popular board game plays out a scenario in which 3 - 6 players are exploring an abandonded house, until one of them turns on the rest, unleashing one of many B-List horror movie monsters into the house. <br />
+            The game has a variety of campaigns, or haunts as they are called in game, to play through, and the house is built by drawing tiles each turn, thus making this game as replayable as your heart's content.
+        </p>
+        <br />
+        <h4>Goal of the project</h4>
+        <p>
+            The goal of this project is to capture the essence of the gameplay. The complexity of the game makes this project so interesting from a programming perspective. 
         </p>
     </div>
     <div id="ProductLink">

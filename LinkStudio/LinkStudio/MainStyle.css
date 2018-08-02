@@ -83,8 +83,8 @@ body p{
 
 #PageWrapper
 {
-width: 844px;
-margin: auto;
+    width: 1000px;
+    margin: auto;
 }
 
 #Body {
