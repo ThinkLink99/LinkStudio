@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="LinkStudio.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+	<title>Link Studio</title>
+    <link href="MainStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="PageWrapper">
+        <a href="../Default.aspx"></a>
+            <header class = "navbar">
+                <a href = "../Default.aspx">Home</a>
+                <a href = "../About.aspx">About</a>
+                <a href = "../Blog.aspx">Blog</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Products</button>
+                        <div class="dropdown-content">
+                            <a href ="../Products/LinkEngine.aspx">LinkEngine</a>
+                            <a href ="../Products/CSharpOTH.aspx">CSharp on the Hill</a>
+                        </div>
+                    </div>
+            </header>
+        <div id = "Body">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+            <footer>Copyright&copy; 2018</footer>
+        </div>
+        <div id="Sidebar">
+            <strong>Sidebar</strong>
+            <asp:ContentPlaceHolder ID="Side" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>                 
+    </div>
+    </form>
+</body>
+</html>
