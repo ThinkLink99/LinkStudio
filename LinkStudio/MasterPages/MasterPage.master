@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPages_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+	<title>Rogue: Dungeon RPG</title>
+    <link href="/Style/RogueSheet.css" rel="stylesheet" />
+    <script type="text/javascript" src="Scripts/modernizr-2.8.3.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="PageWrapper">
+            <a href="/Default.aspx"><img src="/Files/images/banner.png" width="700" height="100" alt=""/></a>
+        <header class = "navbar">
+		        <nav>
+        	        <ul>
+                        <li><a href = "/Default.aspx">Home</a></li>
+                        <li><a href = "/about.aspx">About</a></li>
+                        <li><a href = "/blog.aspx">Blog</a></li>
+        	        </ul>
+                </nav>
+            </header>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>                 
+        <footer>&copy; Copyright 2018</footer>
+    </div>
+        <div id="Sidebar">
+        <aside>
+            <asp:ContentPlaceHolder ID="Side" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </aside>   
+    </div>
+    </form>
+</body>
+</html>
