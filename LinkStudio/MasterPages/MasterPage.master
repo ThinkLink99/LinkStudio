@@ -5,37 +5,44 @@
 <html>
 <head runat="server">
     <meta charset="utf-8" />
-	<title>Rogue: Dungeon RPG</title>
-    <link href="/Style/RogueSheet.css" rel="stylesheet" />
-    <script type="text/javascript" src="Scripts/modernizr-2.8.3.js"></script>
+	<title>Link Studio</title>
+    <link href="../Style/RogueSheet.css" rel="stylesheet" />
     <asp:ContentPlaceHolder id="head" runat="server">
         
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 47px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div id="PageWrapper">
-            <a href="/Default.aspx"><img src="/Files/images/banner.png" width="700" height="100" alt=""/></a>
+        <a href="../Default.aspx"></a>
         <header class = "navbar">
 		        <nav>
         	        <ul>
-                        <li><a href = "/Default.aspx">Home</a></li>
-                        <li><a href = "/about.aspx">About</a></li>
-                        <li><a href = "/blog.aspx">Blog</a></li>
+                        <li><a href = "../Default.aspx">Home</a></li>
+                        <li><a href = "../About.aspx">About</a></li>
+                        <li><a href = "../Blog.aspx">Blog</a></li>
+                        <li><a href = "../Products.aspx">Products</a></li>
         	        </ul>
                 </nav>
             </header>
+        <div id = "Body">
+
+        </div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
 
-            </asp:ContentPlaceHolder>                 
-        <footer>&copy; Copyright 2018</footer>
-    </div>
-        <div id="Sidebar">
-        <aside>
+        </asp:ContentPlaceHolder>
+        <div id="Sidebar" class="auto-style1">
+            contents
             <asp:ContentPlaceHolder ID="Side" runat="server">
 
             </asp:ContentPlaceHolder>
-        </aside>   
+        </div>                 
+        <footer>Copyright&copy; 2018</footer>
     </div>
     </form>
 </body>
