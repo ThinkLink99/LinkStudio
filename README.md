@@ -1,2 +1,3 @@
-# RogueASP
-The website for my RPG project
+# LinkStudio
+The website for my team
+Website is deployed through Azure's continuous deployment system

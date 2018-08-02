@@ -1,0 +1,10 @@
+﻿#ProductInfo {
+    background-color:green;
+    float:left;
+    width:50%;
+}
+#ProductLink {
+    background-color:red;
+    width:50%;
+    float:right;
+}
