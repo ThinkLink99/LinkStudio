@@ -15,29 +15,30 @@
     <form id="form1" runat="server">
     <div id="PageWrapper">
         <a href="../Default.aspx"></a>
-        <header class = "navbar">
-		        <nav>
-        	        <ul>
-                        <li><a href = "../Default.aspx">Home</a></li>
-                        <li><a href = "../About.aspx">About</a></li>
-                        <li><a href = "../Blog.aspx">Blog</a></li>
-                        <li><a href = "../Products.aspx">Products</a></li>
-        	        </ul>
-                </nav>
+            <header class = "navbar">
+                <a href = "../Default.aspx">Home</a>
+                <a href = "../About.aspx">About</a>
+                <a href = "../Blog.aspx">Blog</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Products</button>
+                        <div class="dropdown-content">
+                            <a href ="../Products/LinkEngine.aspx">LinkEngine</a>
+                            <a href ="../Products/CSharpOTH.aspx">CSharp on the Hill</a>
+                        </div>
+                    </div>
             </header>
         <div id = "Body">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
 
+            </asp:ContentPlaceHolder>
+            <footer>Copyright&copy; 2018</footer>
         </div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-
-        </asp:ContentPlaceHolder>
         <div id="Sidebar">
-            <h4>Recent Tweets</h4>
+            <strong>Sidebar</strong>
             <asp:ContentPlaceHolder ID="Side" runat="server">
 
             </asp:ContentPlaceHolder>
         </div>                 
-        <footer>Copyright&copy; 2018</footer>
     </div>
     </form>
 </body>
