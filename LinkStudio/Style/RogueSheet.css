@@ -52,6 +52,10 @@ body footer {
 	color: white;
 	background-color:#979797;
 }
-body aside {
+#Body {
+    float: right;
+}
+#Sidebar {
     float: left;
+    background-color:#979797;
 }
