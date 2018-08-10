@@ -31,15 +31,15 @@
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>
-            <footer>Copyright&copy; 2018</footer>
         </div>
         <div id="Sidebar">
             <strong>Sidebar</strong>
+            <%--<a class="twitter-timeline" href="https://twitter.com/ThinkLink1999?ref_src=twsrc%5Etfw">Tweets by ThinkLink1999</a>--%> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
             <asp:ContentPlaceHolder ID="Side" runat="server">
 
             </asp:ContentPlaceHolder>
-        </div>                 
-    </div>
+        </div>
+    </div>   
     </form>
 </body>
 </html>

@@ -69,6 +69,7 @@
     <Content Include="About.aspx" />
     <Content Include="Blog.aspx" />
     <Content Include="Products\CSharpOTH.aspx" />
+    <Content Include="Products\images\csoth.png" />
     <Content Include="Products\LinkEngine.aspx" />
     <Content Include="packages.config" />
     <Content Include="Master.Master" />
